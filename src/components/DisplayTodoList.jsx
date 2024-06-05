@@ -1,20 +1,16 @@
-export const DisplayTodoList = ({ task }) => {
-  const { title, description, isDone } = task;
+import { Task } from "./Task";
+
+export const DisplayTodoList = ({ tasksList, setTasksList }) => {
+  const handleDelete = (id) => {
+    let newTasksList = tasksList.filter((task) => task.id !== id);
+    setTasksList(newTasksList);
+  };
 
   return (
-    <div className="card m-3" style={{ width: 200 }}>
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{description}</p>
-      </div>
-      <div className="d-flex justify-content-around mb-3">
-        <button type="button" class="btn btn-outline-success">
-          Done
-        </button>
-        <button type="button" class="btn btn-outline-danger">
-          Delete
-        </button>
-      </div>
+    <div className="d-flex flex-wrap justify-content-evenly w-50">
+      {tasksList.map(({ id, ...task }) => (
+        <Task task={task} id={id} key={id} handleDelete={handleDelete} />
+      ))}
     </div>
   );
 };

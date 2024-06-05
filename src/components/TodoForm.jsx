@@ -5,7 +5,6 @@ export const TodoForm = ({ tasksList, setTasksList }) => {
     id: "",
     title: "",
     description: "",
-    isDone: false,
   });
 
   const [error, setError] = useState(false);
@@ -27,7 +26,6 @@ export const TodoForm = ({ tasksList, setTasksList }) => {
       id: "",
       title: "",
       description: "",
-      isDone: false,
     });
     setError(false);
   };
@@ -41,7 +39,7 @@ export const TodoForm = ({ tasksList, setTasksList }) => {
             Title:
           </label>
           <input
-            className="form-control"
+            className="form-control bg-black bg-gradient text-white"
             type="text"
             name="title"
             onChange={handleChange}
@@ -53,7 +51,7 @@ export const TodoForm = ({ tasksList, setTasksList }) => {
             Description:
           </label>
           <textarea
-            className="form-control"
+            className="form-control bg-black bg-gradient text-white"
             style={{ height: 100, width: 210 }}
             onChange={handleChange}
             name="description"

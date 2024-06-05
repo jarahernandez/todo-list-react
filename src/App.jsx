@@ -6,13 +6,9 @@ export const App = () => {
   const [tasksList, setTasksList] = useState([]);
 
   return (
-    <>
+    <div className="d-flex flex-column align-items-center bg-black bg-gradient text-white mh-100">
       <TodoForm tasksList={tasksList} setTasksList={setTasksList} />
-      <div className="d-flex flex-wrap justify-content-evenly p-5 w-50">
-        {tasksList.map(({ id, ...task }) => (
-          <DisplayTodoList task={task} key={id} />
-        ))}
-      </div>
-    </>
+      <DisplayTodoList tasksList={tasksList} setTasksList={setTasksList} />
+    </div>
   );
 };
