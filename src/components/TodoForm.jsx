@@ -32,7 +32,7 @@ export const TodoForm = ({ tasksList, setTasksList }) => {
 
   return (
     <div className="d-flex flex-column align-items-center ">
-      <h1 className="m-4">Todo List</h1>
+      <h1 className="m-4">To-Do List</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label className="form-label" htmlFor="title">

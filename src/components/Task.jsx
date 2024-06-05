@@ -25,7 +25,7 @@ export const Task = ({ task, id, handleDelete }) => {
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
       </div>
-      <div className="d-flex justify-content-around mb-3">
+      <div className="d-flex flex-wrap justify-content-around mb-3">
         {isDone ? (
           <button
             type="button"

@@ -6,7 +6,7 @@ export const App = () => {
   const [tasksList, setTasksList] = useState([]);
 
   return (
-    <div className="d-flex flex-column align-items-center bg-black bg-gradient text-white mh-100">
+    <div className="d-flex flex-column align-items-center bg-black bg-gradient text-white min-vh-100">
       <TodoForm tasksList={tasksList} setTasksList={setTasksList} />
       <DisplayTodoList tasksList={tasksList} setTasksList={setTasksList} />
     </div>
